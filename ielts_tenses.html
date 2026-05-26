@@ -1,0 +1,1781 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>English Tenses — IELTS Deep Dive</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,700;0,900;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --ink: #12100e;
+  --ink2: #2d2926;
+  --paper: #faf7f2;
+  --paper2: #f3ede4;
+  --paper3: #ebe3d8;
+  --rust: #b5451b;
+  --rust2: #d4622e;
+  --rust-light: #fdf0eb;
+  --teal: #1a6b6b;
+  --teal2: #228080;
+  --teal-light: #e8f5f5;
+  --gold: #c08a1e;
+  --gold-light: #fdf5e0;
+  --slate: #3d5a80;
+  --slate-light: #eaf0f8;
+  --green: #2d6a4f;
+  --green-light: #e8f5ee;
+  --red: #9b1c1c;
+  --red-light: #fef2f2;
+  --purple: #5b21b6;
+  --purple-light: #f5f3ff;
+  --muted: #7a6e65;
+  --border: #ddd5c8;
+  --shadow: 0 2px 12px rgba(18,16,14,0.08);
+  --shadow-lg: 0 8px 32px rgba(18,16,14,0.12);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  background: var(--paper);
+  color: var(--ink);
+  line-height: 1.7;
+  font-size: 15px;
+}
+
+/* ── LAYOUT ── */
+.layout { display: flex; min-height: 100vh; }
+
+/* ── SIDEBAR ── */
+.sidebar {
+  width: 272px;
+  flex-shrink: 0;
+  background: var(--ink);
+  position: fixed;
+  top: 0; left: 0;
+  height: 100vh;
+  overflow-y: auto;
+  z-index: 200;
+  padding-bottom: 48px;
+}
+
+.sidebar::-webkit-scrollbar { width: 3px; }
+.sidebar::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.12); }
+
+.sidebar-top {
+  padding: 28px 20px 24px;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+}
+
+.sidebar-logo {
+  font-family: 'Fraunces', serif;
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: #fff;
+  line-height: 1.1;
+}
+
+.sidebar-logo span { color: #e8a44a; }
+
+.sidebar-sub {
+  font-size: 0.68rem;
+  color: rgba(255,255,255,0.35);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  margin-top: 6px;
+}
+
+.nav-section { padding: 20px 12px 4px; }
+
+.nav-label {
+  font-size: 0.62rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: rgba(255,255,255,0.25);
+  padding: 0 8px;
+  margin-bottom: 4px;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: rgba(255,255,255,0.55);
+  font-size: 0.8rem;
+  font-weight: 500;
+  transition: all 0.18s;
+  margin-bottom: 1px;
+  line-height: 1.3;
+}
+
+.nav-link:hover { background: rgba(255,255,255,0.07); color: rgba(255,255,255,0.9); }
+.nav-link.active { background: rgba(232,164,74,0.15); color: #e8c47a; }
+
+.nav-dot {
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: currentColor;
+  flex-shrink: 0;
+  opacity: 0.5;
+}
+
+.nav-link.active .nav-dot { opacity: 1; background: #e8a44a; }
+
+/* ── MAIN ── */
+.main { margin-left: 272px; }
+
+/* ── HERO ── */
+.hero {
+  background: var(--ink);
+  padding: 72px 64px 56px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-glow {
+  position: absolute;
+  width: 500px; height: 500px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(176,69,27,0.2) 0%, transparent 65%);
+  top: -150px; right: -100px;
+  pointer-events: none;
+}
+
+.hero-timeline {
+  position: absolute;
+  bottom: 0; left: 64px; right: 64px;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, rgba(232,164,74,0.6), transparent);
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(181,69,27,0.2);
+  border: 1px solid rgba(181,69,27,0.4);
+  color: #e8a44a;
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  padding: 5px 12px;
+  border-radius: 100px;
+  margin-bottom: 20px;
+}
+
+.hero h1 {
+  font-family: 'Fraunces', serif;
+  font-size: 3.8rem;
+  font-weight: 900;
+  color: #fff;
+  line-height: 1.05;
+  margin-bottom: 18px;
+}
+
+.hero h1 em {
+  font-style: italic;
+  color: #e8a44a;
+}
+
+.hero-desc {
+  color: rgba(255,255,255,0.5);
+  font-size: 0.95rem;
+  max-width: 560px;
+  font-weight: 300;
+  line-height: 1.9;
+  margin-bottom: 32px;
+}
+
+.hero-stats {
+  display: flex;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
+.stat { }
+.stat-num {
+  font-family: 'Fraunces', serif;
+  font-size: 2.2rem;
+  font-weight: 900;
+  color: #e8a44a;
+  line-height: 1;
+}
+.stat-label {
+  font-size: 0.72rem;
+  color: rgba(255,255,255,0.35);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-top: 4px;
+}
+
+/* ── CONTENT ── */
+.content {
+  padding: 0 64px 100px;
+  max-width: 980px;
+}
+
+/* ── SECTION ── */
+.section {
+  padding-top: 64px;
+}
+
+.section-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  margin-bottom: 36px;
+  padding-bottom: 24px;
+  border-bottom: 1.5px solid var(--border);
+}
+
+.section-num {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: var(--rust);
+  background: var(--rust-light);
+  border: 1px solid rgba(181,69,27,0.2);
+  padding: 5px 10px;
+  border-radius: 6px;
+  margin-top: 5px;
+  white-space: nowrap;
+}
+
+.section-title {
+  font-family: 'Fraunces', serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--ink);
+  line-height: 1.15;
+}
+
+.section-desc {
+  font-size: 0.875rem;
+  color: var(--muted);
+  margin-top: 6px;
+  line-height: 1.8;
+}
+
+/* ── SUBSECTION ── */
+.sub { margin-bottom: 40px; }
+
+.sub-title {
+  font-family: 'Fraunces', serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--teal);
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.sub-title::after {
+  content: '';
+  flex: 1;
+  height: 1.5px;
+  background: linear-gradient(90deg, var(--teal-light), transparent);
+}
+
+/* ── FORMULA ── */
+.formula {
+  background: var(--ink2);
+  border-radius: 12px;
+  padding: 20px 24px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.88rem;
+  line-height: 2;
+  margin: 14px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.formula::before {
+  content: 'FORMULA';
+  position: absolute;
+  top: 10px; right: 16px;
+  font-size: 0.58rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  color: rgba(255,255,255,0.15);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.formula .part-s { color: #86efac; }
+.formula .part-v { color: #fbbf24; }
+.formula .part-o { color: #93c5fd; }
+.formula .part-plus { color: rgba(255,255,255,0.3); }
+.formula .part-opt { color: rgba(255,255,255,0.4); font-style: italic; }
+.formula .note { color: rgba(255,255,255,0.25); font-size: 0.78rem; }
+.formula .positive { color: #86efac; }
+.formula .negative { color: #fca5a5; }
+.formula .question { color: #93c5fd; }
+
+/* ── TABLE ── */
+.tbl { overflow-x: auto; border-radius: 10px; border: 1.5px solid var(--border); margin: 14px 0; box-shadow: var(--shadow); }
+
+table { width: 100%; border-collapse: collapse; font-size: 0.845rem; }
+
+thead tr { background: var(--ink2); }
+thead th {
+  padding: 13px 16px;
+  text-align: left;
+  color: rgba(255,255,255,0.85);
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  white-space: nowrap;
+}
+
+tbody tr:nth-child(odd) { background: #fff; }
+tbody tr:nth-child(even) { background: var(--paper2); }
+tbody tr:hover { background: var(--slate-light); transition: background 0.15s; }
+
+tbody td {
+  padding: 12px 16px;
+  vertical-align: top;
+  border-bottom: 1px solid var(--border);
+  line-height: 1.6;
+}
+
+td.label {
+  font-weight: 700;
+  color: var(--ink);
+  white-space: nowrap;
+  font-size: 0.82rem;
+}
+
+td.mono, .mono {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.8rem;
+  color: var(--ink2);
+}
+
+/* ── EXAMPLES ── */
+.exbox { display: flex; flex-direction: column; gap: 6px; margin: 12px 0; }
+
+.ex {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-size: 0.855rem;
+  line-height: 1.65;
+  border-left: 3px solid transparent;
+}
+
+.ex-g { background: var(--green-light); border-color: #2d9e6b; }
+.ex-r { background: var(--red-light); border-color: #e53e3e; }
+.ex-b { background: var(--slate-light); border-color: var(--slate); }
+.ex-y { background: var(--gold-light); border-color: var(--gold); }
+.ex-p { background: var(--purple-light); border-color: var(--purple); }
+.ex-t { background: var(--teal-light); border-color: var(--teal); }
+
+.ex-icon { flex-shrink: 0; margin-top: 1px; font-size: 0.85rem; }
+.ex-body { flex: 1; }
+.ex-en { font-style: italic; color: var(--ink); font-weight: 500; }
+.ex-th { display: block; font-size: 0.78rem; color: var(--muted); margin-top: 3px; }
+.ex-note { display: block; font-size: 0.75rem; color: var(--rust); margin-top: 3px; font-weight: 600; }
+
+/* ── CALLOUT ── */
+.callout {
+  border-radius: 10px;
+  padding: 14px 18px;
+  margin: 14px 0;
+  display: flex;
+  gap: 12px;
+  font-size: 0.855rem;
+  line-height: 1.75;
+}
+
+.callout-tip { background: var(--gold-light); border: 1px solid rgba(192,138,30,0.25); }
+.callout-warn { background: var(--red-light); border: 1px solid rgba(155,28,28,0.2); }
+.callout-note { background: var(--slate-light); border: 1px solid rgba(61,90,128,0.2); }
+.callout-teal { background: var(--teal-light); border: 1px solid rgba(26,107,107,0.2); }
+
+.callout-icon { font-size: 1rem; flex-shrink: 0; margin-top: 1px; }
+.callout strong { display: block; font-weight: 700; margin-bottom: 3px; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.05em; }
+
+/* ── COMPARE GRID ── */
+.compare { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 14px 0; }
+
+.compare-card {
+  background: #fff;
+  border: 1.5px solid var(--border);
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: var(--shadow);
+}
+
+.compare-card.highlight { border-color: var(--teal); }
+
+.compare-head {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 14px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--paper3);
+  color: var(--ink);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.compare-head .dot {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* ── TIMELINE ── */
+.tl { position: relative; margin: 20px 0 20px 16px; }
+
+.tl::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 8px; bottom: 8px;
+  width: 2px;
+  background: linear-gradient(180deg, var(--teal), var(--rust));
+}
+
+.tl-item {
+  position: relative;
+  padding: 0 0 20px 28px;
+}
+
+.tl-item:last-child { padding-bottom: 0; }
+
+.tl-dot {
+  position: absolute;
+  left: -5px; top: 6px;
+  width: 12px; height: 12px;
+  border-radius: 50%;
+  background: var(--paper);
+  border: 2px solid var(--teal);
+}
+
+.tl-item:last-child .tl-dot { border-color: var(--rust); }
+
+.tl-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--teal);
+  margin-bottom: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.tl-text { font-size: 0.845rem; line-height: 1.65; color: var(--ink2); }
+
+/* ── SIGNAL WORDS ── */
+.signals {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin: 10px 0;
+}
+
+.signal {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.75rem;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-weight: 500;
+}
+
+.sig-teal { background: var(--teal-light); color: var(--teal); border: 1px solid rgba(26,107,107,0.2); }
+.sig-rust { background: var(--rust-light); color: var(--rust); border: 1px solid rgba(181,69,27,0.2); }
+.sig-gold { background: var(--gold-light); color: var(--gold); border: 1px solid rgba(192,138,30,0.2); }
+.sig-slate { background: var(--slate-light); color: var(--slate); border: 1px solid rgba(61,90,128,0.2); }
+
+/* ── QUIZ ── */
+.quiz-wrap {
+  background: #fff;
+  border: 1.5px solid var(--border);
+  border-radius: 14px;
+  padding: 32px;
+  margin: 24px 0;
+  box-shadow: var(--shadow-lg);
+}
+
+.quiz-header {
+  font-family: 'Fraunces', serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 8px;
+}
+
+.quiz-meta {
+  font-size: 0.78rem;
+  color: var(--muted);
+  margin-bottom: 28px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--border);
+}
+
+.score-bar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 28px;
+  padding: 12px 16px;
+  background: var(--paper2);
+  border-radius: 8px;
+  font-size: 0.82rem;
+}
+
+.score-label { color: var(--muted); font-weight: 500; }
+.score-track { flex: 1; height: 8px; background: var(--paper3); border-radius: 100px; overflow: hidden; }
+.score-fill { height: 100%; background: linear-gradient(90deg, var(--teal), var(--rust)); border-radius: 100px; transition: width 0.5s ease; width: 0%; }
+.score-num { font-family: 'JetBrains Mono', monospace; font-weight: 700; color: var(--ink); font-size: 0.85rem; min-width: 40px; text-align: right; }
+
+.q-item {
+  margin-bottom: 24px;
+  padding: 20px;
+  background: var(--paper);
+  border-radius: 10px;
+  border: 1.5px solid var(--border);
+  transition: border-color 0.2s;
+}
+
+.q-item.answered { border-color: var(--paper3); }
+
+.q-num {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: var(--rust);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 8px;
+}
+
+.q-text {
+  font-size: 0.9rem;
+  font-weight: 500;
+  line-height: 1.65;
+  margin-bottom: 14px;
+  color: var(--ink);
+}
+
+.q-text .blank {
+  font-family: 'JetBrains Mono', monospace;
+  background: var(--paper2);
+  border: 1.5px dashed var(--border);
+  padding: 2px 10px;
+  border-radius: 5px;
+  font-size: 0.82rem;
+  color: var(--muted);
+}
+
+.q-opts { display: flex; flex-wrap: wrap; gap: 8px; }
+
+.q-btn {
+  padding: 8px 18px;
+  border-radius: 8px;
+  border: 1.5px solid var(--border);
+  background: #fff;
+  cursor: pointer;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--ink2);
+  transition: all 0.15s;
+}
+
+.q-btn:hover:not(:disabled) { border-color: var(--teal); color: var(--teal); background: var(--teal-light); }
+.q-btn:disabled { cursor: default; }
+.q-btn.correct { background: var(--green-light); border-color: #2d9e6b; color: #166534; }
+.q-btn.wrong { background: var(--red-light); border-color: #e53e3e; color: var(--red); }
+
+.q-feedback {
+  margin-top: 12px;
+  padding: 10px 14px;
+  border-radius: 7px;
+  font-size: 0.82rem;
+  line-height: 1.6;
+  display: none;
+}
+
+.q-feedback.show { display: block; }
+.q-feedback.ok { background: var(--green-light); color: #166534; }
+.q-feedback.no { background: var(--red-light); color: var(--red); }
+
+/* ── DIFF TABLE (same sentence, diff tense) ── */
+.diff-grid { display: flex; flex-direction: column; gap: 0; border-radius: 12px; overflow: hidden; border: 1.5px solid var(--border); box-shadow: var(--shadow); margin: 14px 0; }
+
+.diff-row {
+  display: grid;
+  grid-template-columns: 180px 1fr 1fr;
+  border-bottom: 1px solid var(--border);
+}
+
+.diff-row:last-child { border-bottom: none; }
+
+.diff-row.head { background: var(--ink2); }
+
+.diff-cell {
+  padding: 13px 16px;
+  font-size: 0.845rem;
+  line-height: 1.6;
+  vertical-align: top;
+  border-right: 1px solid var(--border);
+}
+
+.diff-cell:last-child { border-right: none; }
+
+.diff-row.head .diff-cell {
+  color: rgba(255,255,255,0.75);
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.diff-row:nth-child(even):not(.head) { background: var(--paper2); }
+.diff-row:nth-child(odd):not(.head) { background: #fff; }
+
+.diff-tense {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--teal);
+}
+
+.diff-en { font-style: italic; color: var(--ink); font-weight: 500; font-size: 0.845rem; }
+.diff-th { font-size: 0.78rem; color: var(--muted); display: block; margin-top: 3px; }
+
+/* ── IELTS USE BADGE ── */
+.ielts-badges { display: flex; gap: 8px; flex-wrap: wrap; margin: 10px 0; }
+
+.ib {
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 6px;
+  letter-spacing: 0.04em;
+}
+
+.ib-t1 { background: #dbeafe; color: #1e40af; }
+.ib-t2 { background: #fce7f3; color: #9d174d; }
+.ib-sp { background: #d1fae5; color: #065f46; }
+
+/* ── BACK TOP ── */
+.back-top {
+  position: fixed;
+  bottom: 28px; right: 28px;
+  width: 44px; height: 44px;
+  background: var(--ink2);
+  color: #e8a44a;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.1rem;
+  box-shadow: var(--shadow-lg);
+  transition: all 0.2s;
+  display: flex; align-items: center; justify-content: center;
+  opacity: 0; pointer-events: none;
+}
+
+.back-top.show { opacity: 1; pointer-events: all; }
+.back-top:hover { transform: translateY(-3px); }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 900px) {
+  .sidebar { display: none; }
+  .main { margin-left: 0; }
+  .hero { padding: 40px 24px; }
+  .content { padding: 0 24px 80px; }
+  .compare { grid-template-columns: 1fr; }
+  .diff-row { grid-template-columns: 1fr; }
+  .hero h1 { font-size: 2.4rem; }
+}
+
+/* ── FADE IN ── */
+@keyframes fadeUp { from { opacity:0; transform:translateY(18px); } to { opacity:1; transform:translateY(0); } }
+.section { animation: fadeUp 0.45s ease both; }
+</style>
+</head>
+<body>
+
+<div class="layout">
+
+<!-- SIDEBAR -->
+<nav class="sidebar">
+  <div class="sidebar-top">
+    <div class="sidebar-logo">Tenses<br><span>Deep Dive</span></div>
+    <div class="sidebar-sub">IELTS Grammar · Band 7</div>
+  </div>
+
+  <div class="nav-section">
+    <div class="nav-label">บทนำ</div>
+    <a href="#intro" class="nav-link"><span class="nav-dot"></span>ทำไม Tense ถึงสำคัญ</a>
+    <a href="#overview" class="nav-link"><span class="nav-dot"></span>ภาพรวม 12 Tenses</a>
+  </div>
+
+  <div class="nav-section">
+    <div class="nav-label">Present Tenses</div>
+    <a href="#sp" class="nav-link"><span class="nav-dot"></span>Simple Present</a>
+    <a href="#pc" class="nav-link"><span class="nav-dot"></span>Present Continuous</a>
+    <a href="#pp" class="nav-link"><span class="nav-dot"></span>Present Perfect</a>
+    <a href="#ppc" class="nav-link"><span class="nav-dot"></span>Present Perfect Cont.</a>
+  </div>
+
+  <div class="nav-section">
+    <div class="nav-label">Past Tenses</div>
+    <a href="#past" class="nav-link"><span class="nav-dot"></span>Simple Past</a>
+    <a href="#pastc" class="nav-link"><span class="nav-dot"></span>Past Continuous</a>
+    <a href="#pastp" class="nav-link"><span class="nav-dot"></span>Past Perfect</a>
+    <a href="#pastpc" class="nav-link"><span class="nav-dot"></span>Past Perfect Cont.</a>
+  </div>
+
+  <div class="nav-section">
+    <div class="nav-label">Future Tenses</div>
+    <a href="#fut" class="nav-link"><span class="nav-dot"></span>Simple Future</a>
+    <a href="#futc" class="nav-link"><span class="nav-dot"></span>Future Continuous</a>
+    <a href="#futp" class="nav-link"><span class="nav-dot"></span>Future Perfect</a>
+    <a href="#futpc" class="nav-link"><span class="nav-dot"></span>Future Perfect Cont.</a>
+  </div>
+
+  <div class="nav-section">
+    <div class="nav-label">เปรียบเทียบ & ฝึก</div>
+    <a href="#compare" class="nav-link"><span class="nav-dot"></span>ประโยคเดียว ต่าง Tense</a>
+    <a href="#ielts" class="nav-link"><span class="nav-dot"></span>ใช้ใน IELTS อย่างไร</a>
+    <a href="#errors" class="nav-link"><span class="nav-dot"></span>ข้อผิดพลาดที่พบบ่อย</a>
+    <a href="#quiz" class="nav-link"><span class="nav-dot"></span>แบบทดสอบ 20 ข้อ</a>
+  </div>
+</nav>
+
+<!-- MAIN -->
+<main class="main">
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-glow"></div>
+  <div class="hero-badge">🕐 IELTS Grammar · Deep Dive</div>
+  <h1>English<br><em>Tenses</em></h1>
+  <p class="hero-desc">ครบทุก 12 tenses ตั้งแต่โครงสร้าง การใช้งาน Signal Words ตัวอย่างระดับ Academic และข้อผิดพลาดที่พบบ่อย — ออกแบบมาสำหรับ IELTS Band 7 โดยเฉพาะ</p>
+  <div class="hero-stats">
+    <div class="stat"><div class="stat-num">12</div><div class="stat-label">Tenses</div></div>
+    <div class="stat"><div class="stat-num">100+</div><div class="stat-label">ตัวอย่างประโยค</div></div>
+    <div class="stat"><div class="stat-num">20</div><div class="stat-label">ข้อทดสอบ</div></div>
+    <div class="stat"><div class="stat-num">Band 7</div><div class="stat-label">เป้าหมาย</div></div>
+  </div>
+  <div class="hero-timeline"></div>
+</div>
+
+<div class="content">
+
+<!-- ── INTRO ── -->
+<div class="section" id="intro">
+  <div class="section-header">
+    <div class="section-num">INTRO</div>
+    <div>
+      <div class="section-title">ทำไม Tense ถึงสำคัญใน IELTS</div>
+      <div class="section-desc">Grammatical Range & Accuracy = 25% ของคะแนน Writing และ Speaking</div>
+    </div>
+  </div>
+
+  <div class="sub">
+    <p style="font-size:0.9rem;line-height:1.9;color:var(--ink2);margin-bottom:16px;">
+      ใน IELTS Band 7 กรรมการจะดูว่าคุณ <strong>ใช้ tenses ได้หลากหลาย</strong> และ <strong>ถูกต้องตามบริบท</strong> ไม่ใช่แค่ใช้ Simple Present ทั้งหมด การใช้ tense ผิดอาจทำให้ความหมายเปลี่ยนไปอย่างสิ้นเชิง
+    </p>
+
+    <div class="compare">
+      <div class="compare-card">
+        <div class="compare-head"><span class="dot" style="background:var(--red)"></span>Band 5-6 (ใช้ tense ซ้ำ)</div>
+        <div class="exbox">
+          <div class="ex ex-r"><span class="ex-icon">✗</span><div class="ex-body"><span class="ex-en">The economy improve in 2020. The government invest more money. Now situation is better.</span><span class="ex-note">ใช้ simple present ทั้งหมด ผิด tense</span></div></div>
+        </div>
+      </div>
+      <div class="compare-card highlight">
+        <div class="compare-head"><span class="dot" style="background:var(--green)"></span>Band 7 (ใช้ tense หลากหลาย)</div>
+        <div class="exbox">
+          <div class="ex ex-g"><span class="ex-icon">✓</span><div class="ex-body"><span class="ex-en">The economy <u>improved</u> significantly in 2020. The government <u>had invested</u> heavily in infrastructure, and the situation <u>has since stabilised</u>.</span></div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="callout callout-tip">
+      <span class="callout-icon">💡</span>
+      <div><strong>กฎทอง</strong>ทุก tense มีความหมายเฉพาะเจาะจง — เลือกให้ถูกต้องตาม <em>เวลา</em> และ <em>ความสัมพันธ์</em> ของเหตุการณ์ ไม่ใช่แค่แปลจากภาษาไทย</div>
+    </div>
+  </div>
+</div>
+
+<!-- ── OVERVIEW ── -->
+<div class="section" id="overview">
+  <div class="section-header">
+    <div class="section-num">00</div>
+    <div>
+      <div class="section-title">ภาพรวม 12 Tenses</div>
+      <div class="section-desc">ทั้ง 12 tense แบ่งเป็น 3 กลุ่มหลัก × 4 รูปแบบ</div>
+    </div>
+  </div>
+
+  <div class="tbl">
+    <table>
+      <thead><tr><th></th><th>Simple</th><th>Continuous (กำลัง)</th><th>Perfect (แล้ว)</th><th>Perfect Cont. (ต่อเนื่องแล้ว)</th></tr></thead>
+      <tbody>
+        <tr>
+          <td class="label" style="background:var(--teal-light);color:var(--teal);">PRESENT</td>
+          <td class="mono">V / V+s</td>
+          <td class="mono">is/am/are + V-ing</td>
+          <td class="mono">has/have + V3</td>
+          <td class="mono">has/have been + V-ing</td>
+        </tr>
+        <tr>
+          <td class="label" style="background:var(--rust-light);color:var(--rust);">PAST</td>
+          <td class="mono">V2 / V+ed</td>
+          <td class="mono">was/were + V-ing</td>
+          <td class="mono">had + V3</td>
+          <td class="mono">had been + V-ing</td>
+        </tr>
+        <tr>
+          <td class="label" style="background:var(--slate-light);color:var(--slate);">FUTURE</td>
+          <td class="mono">will + V</td>
+          <td class="mono">will be + V-ing</td>
+          <td class="mono">will have + V3</td>
+          <td class="mono">will have been + V-ing</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="callout callout-note">
+    <span class="callout-icon">📌</span>
+    <div><strong>วิธีจำ</strong>ใน IELTS ที่ใช้บ่อยที่สุดคือ: <strong>Simple Present, Simple Past, Present Perfect</strong> (Task 1) และ <strong>Simple Present, Present Perfect, Simple Future</strong> (Task 2) — แต่ต้องรู้ทั้ง 12 เพื่อ Band 7</div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════
+     PRESENT TENSES
+═══════════════════════════════════ -->
+
+<!-- SIMPLE PRESENT -->
+<div class="section" id="sp">
+  <div class="section-header">
+    <div class="section-num">01</div>
+    <div>
+      <div class="section-title">Simple Present</div>
+      <div class="section-desc">ความจริงทั่วไป / สิ่งที่เป็นอยู่ตอนนี้ / การบรรยายกราฟ</div>
+    </div>
+  </div>
+
+  <div class="sub">
+    <div class="sub-title">โครงสร้าง</div>
+    <div class="formula">
+      <span class="positive">+ </span><span class="part-s">Subject</span> <span class="part-plus">+</span> <span class="part-v">V</span> / <span class="part-v">V+s/es</span> <span class="part-plus">(he/she/it)</span><br>
+      <span class="negative">− </span><span class="part-s">Subject</span> <span class="part-plus">+</span> <span class="part-v">do/does not</span> <span class="part-plus">+</span> <span class="part-v">V</span><br>
+      <span class="question">? </span><span class="part-v">Do/Does</span> <span class="part-plus">+</span> <span class="part-s">Subject</span> <span class="part-plus">+</span> <span class="part-v">V</span> <span class="part-plus">?</span>
+      <div class="note"># V+s/es เฉพาะ he / she / it / singular noun เท่านั้น</div>
+    </div>
+  </div>
+
+  <div class="sub">
+    <div class="sub-title">ใช้เมื่อไหร่</div>
+    <div class="tl">
+      <div class="tl-item"><div class="tl-dot"></div><div class="tl-label">ความจริงทั่วไป / กฎ</div><div class="tl-text">สิ่งที่เป็นจริงเสมอ ไม่เปลี่ยนแปลง</div></div>
+      <div class="tl-item"><div class="tl-dot"></div><div class="tl-label">สถานะปัจจุบัน</div><div class="tl-text">สิ่งที่เป็นอยู่ตอนนี้ (stative verbs: know, believe, contain)</div></div>
+      <div class="tl-item"><div class="tl-dot"></div><div class="tl-label">บรรยายกราฟ (Task 1)</div><div class="tl-text">"The graph shows / illustrates / presents..."</div></div>
+      <div class="tl-item"><div class="tl-dot"></div><div class="tl-label">ข้อเท็จจริง Academic</div><div class="tl-text">อ้างงานวิจัย เสนอข้อเถียงทั่วไป</div></div>
+    </div>
+
+    <div class="ielts-badges">
+      <span class="ib ib-t1">📊 Task 1 — หลัก</span>
+      <span class="ib ib-t2">✍ Task 2 — ข้อเท็จจริง</span>
+      <span class="ib ib-sp">🎤 Speaking — ทุก part</span>
+    </div>
+  </div>
+
+  <div class="sub">
+    <div class="sub-title">Signal Words</div>
+    <div class="signals">
+      <span class="signal sig-teal">always</span><span class="signal sig-teal">usually</span><span class="signal sig-teal">generally</span><span class="signal sig-teal">often</span><span class="signal sig-teal">sometimes</span><span class="signal sig-teal">rarely</span><span class="signal sig-teal">never</span><span class="signal sig-teal">every day/year</span><span class="signal sig-teal">in general</span><span class="signal sig-teal">typically</span><span class="signal sig-teal">as a rule</span><span class="signal sig-teal">currently</span><span class="signal sig-teal">nowadays</span>
+    </div>
+  </div>
+
+  <div class="sub">
+    <div class="sub-title">ตัวอย่างระดับ Academic</div>
+    <div class="exbox">
+      <div class="ex ex-b"><span class="ex-icon">▸</span><div class="ex-body"><span class="ex-en">The graph <u>shows</u> a dramatic rise in urban migration between 2000 and 2020.</span><span class="ex-th">กราฟแสดงการเพิ่มขึ้นอย่างมากของการอพยพเข้าเมือง</span><span class="ex-note">Task 1 — ใช้ shows ไม่ใช่ showed (ข้อมูลยังอยู่ในกราฟ)</span></div></div>
+      <div class="ex ex-b"><span class="ex-icon">▸</span><div class="ex-body"><span class="ex-en">Education <u>plays</u> a crucial role in reducing poverty and social inequality.</span><span class="ex-th">การศึกษามีบทบาทสำคัญในการลดความยากจน</span></div></div>
+      <div class="ex ex-b"><span class="ex-icon">▸</span><div class="ex-body"><span class="ex-en">Research consistently <u>demonstrates</u> that early intervention <u>yields</u> the best outcomes.</span><span class="ex-th">งานวิจัยแสดงให้เห็นอย่างสม่ำเสมอว่าการแทรกแซงแต่เนิ่นๆ ให้ผลดีที่สุด</span></div></div>
+      <div class="ex ex-b"><span class="ex-icon">▸</span><div class="ex-body"><span class="ex-en">Governments <u>have</u> a fundamental responsibility to protect the most vulnerable members of society.</span><span class="ex-th">รัฐบาลมีความรับผิดชอบพื้นฐานในการปกป้องสมาชิกที่เปราะบาง</span></div></div>
+    </div>
+  </div>
+
+  <div class="sub">
+    <div class="sub-title">⚠ Stative Verbs — ห้ามใช้กับ Continuous</div>
+    <p style="font-size:0.855rem;color:var(--muted);margin-bottom:10px;">กริยาเหล่านี้บอกสถานะ ไม่ใช่การกระทำ — ใช้ Simple Present เท่านั้น</p>
+    <div class="tbl"><table>
+      <thead><tr><th>หมวด</th><th>กริยา</th><th>ตัวอย่าง</th></tr></thead>
+      <tbody>
+        <tr><td class="label">ความคิดเห็น</td><td class="mono">believe, think, know, understand, agree, assume</td><td class="mono">I <u>believe</u> this approach is effective. (ไม่ใช่ am believing)</td></tr>
+        <tr><td class="label">ความรู้สึก</td><td class="mono">like, love, hate, prefer, want, need, wish</td><td class="mono">She <u>wants</u> to improve her writing skills.</td></tr>
+        <tr><td class="label">ประสาทสัมผัส</td><td class="mono">see, hear, smell, taste, feel (sense)</td><td class="mono">The solution <u>seems</u> viable at this stage.</td></tr>
+        <tr><td class="label">ความเป็นเจ้าของ</td><td class="mono">have, own, belong, contain, consist of</td><td class="mono">The dataset <u>contains</u> over 10,000 entries.</td></tr>
+      </tbody>
+    </table></div>
+    <div class="exbox">
+      <div class="ex ex-r"><span class="ex-icon">✗</span><div class="ex-body"><span class="ex-en">I am knowing the answer. / She is wanting to succeed.</span><span class="ex-note">ผิด — know, want เป็น stative verbs</span></div></div>
+      <div class="ex ex-g"><span class="ex-icon">✓</span><div class="ex-body"><span class="ex-en">I know the answer. / She wants to succeed.</span></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- PRESENT CONTINUOUS -->
+<div class="section" id="pc">
+  <div class="section-header">
+    <div class="section-num">02</div>
+    <div>
+      <div class="section-title">Present Continuous</div>
+      <div class="section-desc">กำลังเกิดขึ้น ณ ขณะนี้ / แนวโน้มที่กำลังเปลี่ยนแปลง</div>
+    </div>
+  </div>
+
+  <div class="sub">
+    <div class="sub-title">โครงสร้าง</div>
+    <div class="formula">
+      <span class="positive">+ </span><span class="part-s">Subject</span> <span class="part-plus">+</span> <span class="part-v">is/am/are</span> <span class="part-plus">+</span> <span class="part-v">V-ing</span><br>
+      <span class="negative">− </span><span class="part-s">Subject</span> <span class="part-plus">+</span> <span class="part-v">is/am/are not</span> <span class="part-plus">+</span> <span class="part-v">V-ing</span><br>
+      <span class="question">? </span><span class="part-v">Is/Am/Are</span> <span class="part-plus">+</span> <span class="part-s">Subject</span> <span class="part-plus">+</span> <span class="part-v">V-ing</span> <span class="part-plus">?</span>
+    </div>
+  </div>
+
+  <div class="sub">
+    <div class="sub-title">ใช้เมื่อไหร่</div>
+    <div class="tl">
+      <div class="tl-item"><div class="tl-dot"></div><div class="tl-label">กำลังเกิดขึ้น ณ ขณะนี้</div><div class="tl-text">The situation is deteriorating rapidly as we speak.</div></div>
+      <div class="tl-item"><div class="tl-dot"></div><div class="tl-label">แนวโน้มปัจจุบัน (ชั่วคราว)</div><div class="tl-text">แนวโน้มที่กำลังเปลี่ยนแปลงอยู่ในช่วงนี้</div></div>
+      <div class="tl-item"><div class="tl-dot"></div><div class="tl-label">แสดงความเปลี่ยนแปลง</div><div class="tl-text">ใช้กับ change, grow, increase, fall, rise, become, improve</div></div>
+    </div>
+    <div class="ielts-badges">
+      <span class="ib ib-t2">✍ Task 2 — แนวโน้ม</span>
+      <span class="ib ib-sp">🎤 Speaking — ทุก part</span>
+    </div>
+  </div>
+
+  <div class="sub">
+    <div class="sub-title">Signal Words</div>
+    <div class="signals">
+      <span class="signal sig-rust">now</span><span class="signal sig-rust">right now</span><span class="signal sig-rust">at the moment</span><span class="signal sig-rust">currently</span><span class="signal sig-rust">at present</span><span class="signal sig-rust">these days</span><span class="signal sig-rust">nowadays</span><span class="signal sig-rust">still</span>
+    </div>
+  </div>
+
+  <div class="sub">
+    <div class="sub-title">ตัวอย่างระดับ Academic</div>
+    <div class="exbox">
+      <div class="ex ex-t"><span class="ex-icon">▸</span><div class="ex-body"><span class="ex-en">The global climate <u>is changing</u> at an unprecedented rate, with consequences that remain difficult to predict.</span><span class="ex-th">สภาพภูมิอากาศโลกกำลังเปลี่ยนแปลงในอัตราที่ไม่เคยพบมาก่อน</span></div></div>
+      <div class="ex ex-t"><span class="ex-icon">▸</span><div class="ex-body"><span class="ex-en">Governments around the world <u>are increasingly recognising</u> the importance of mental health provision.</span><span class="ex-th">รัฐบาลทั่วโลกกำลังตระหนักมากขึ้นถึงความสำคัญของบริการสุขภาพจิต</span></div></div>
+      <div class="ex ex-t"><span class="ex-icon">▸</span><div class="ex-body"><span class="ex-en">The line graph illustrates how consumption patterns <u>are shifting</u> in response to economic pressures.</span></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- PRESENT PERFECT -->
+<div class="section" id="pp">
+  <div class="section-header">
+    <div class="section-num">03</div>
+    <div>
+      <div class="section-title">Present Perfect</div>
+      <div class="section-desc">เหตุการณ์อดีตที่ยังมีผลต่อปัจจุบัน — ใช้บ่อยมากใน IELTS</div>
+    </div>
+  </div>
+
+  <div class="sub">
+    <div class="sub-title">โครงสร้าง</div>
+    <div class="formula">
+      <span class="positive">+ </span><span class="part-s">Subject</span> <span class="part-plus">+</span> <span class="part-v">has/have</span> <span class="part-plus">+</span> <span class="part-v">V3 (past participle)</span><br>
+      <span class="negative">− </span><span class="part-s">Subject</span> <span class="part-plus">+</span> <span class="part-v">has/have not</span> <span class="part-plus">+</span> <span class="part-v">V3</span><br>
+      <span class="note"># has = he/she/it/singular &nbsp;|&nbsp; have = I/you/we/they/plural</span>
+    </div>
+  </div>
+
+  <div class="sub">
+    <div class="sub-title">ใช้เมื่อไหร่ (4 สถานการณ์หลัก)</div>
+    <div class="tbl"><table>
+      <thead><tr><th>สถานการณ์</th><th>ความหมาย</th><th>ตัวอย่าง</th></tr></thead>
+      <tbody>
+        <tr><td class="label">ผลที่ยังมีผลถึงปัจจุบัน</td><td>เกิดในอดีต ผลยังอยู่ตอนนี้</td><td class="mono">Temperatures <u>have risen</u> by 1.5°C since 1900.</td></tr>
+        <tr><td class="label">ประสบการณ์</td><td>เคย/ไม่เคยทำ (ไม่ระบุเวลา)</td><td class="mono">Many nations <u>have failed</u> to meet their targets.</td></tr>
+        <tr><td class="label">เพิ่งเกิด (just/recently)</td><td>เพิ่งเสร็จสิ้น</td><td class="mono">Researchers <u>have recently published</u> a landmark study.</td></tr>
+        <tr><td class="label">ต่อเนื่องจนปัจจุบัน (for/since)</td><td>เริ่มอดีต ยังดำเนินอยู่</td><td class="mono">The crisis <u>has persisted</u> for over a decade.</td></tr>
+      </tbody>
+    </table></div>
+    <div class="ielts-badges">
+      <span class="ib ib-t1">📊 Task 1 — แนวโน้มจนถึงปัจจุบัน</span>
+      <span class="ib ib-t2">✍ Task 2 — อ้างงานวิจัย</span>
+      <span class="ib ib-sp">🎤 Speaking — ประสบการณ์</span>
+    </div>
+  </div>
+
+  <div class="sub">
+    <div class="sub-title">Signal Words</div>
+    <div class="signals">
+      <span class="signal sig-gold">since [year/event]</span><span class="signal sig-gold">for [duration]</span><span class="signal sig-gold">already</span><span class="signal sig-gold">yet</span><span class="signal sig-gold">just</span><span class="signal sig-gold">recently</span><span class="signal sig-gold">ever</span><span class="signal sig-gold">never</span><span class="signal sig-gold">so far</span><span class="signal sig-gold">up to now</span><span class="signal sig-gold">in recent years</span><span class="signal sig-gold">over the past decade</span>
+    </div>
+  </div>
+
+  <div class="sub">
+    <div class="sub-title">ตัวอย่างระดับ Academic</div>
+    <div class="exbox">
+      <div class="ex ex-y"><span class="ex-icon">▸</span><div class="ex-body"><span class="ex-en">Global temperatures <u>have increased</u> by approximately 1.1°C since pre-industrial times.</span><span class="ex-th">อุณหภูมิโลกเพิ่มขึ้นประมาณ 1.1°C นับตั้งแต่ยุคก่อนอุตสาหกรรม</span></div></div>
+      <div class="ex ex-y"><span class="ex-icon">▸</span><div class="ex-body"><span class="ex-en">Research <u>has consistently shown</u> that access to education is the single most effective tool for reducing poverty.</span></div></div>
+      <div class="ex ex-y"><span class="ex-icon">▸</span><div class="ex-body"><span class="ex-en">Urban populations <u>have grown</u> dramatically over the past half-century, placing enormous pressure on infrastructure.</span><span class="ex-th">ประชากรในเมืองเพิ่มขึ้นอย่างมากในช่วงห้าสิบปีที่ผ่านมา</span></div></div>
+      <div class="ex ex-y"><span class="ex-icon">▸</span><div class="ex-body"><span class="ex-en">The government <u>has not yet addressed</u> the root causes of the housing crisis.</span></div></div>
+    </div>
+  </div>
+
+  <div class="sub">
+    <div class="sub-title">⚠ Present Perfect vs Simple Past — สับสนบ่อยมาก</div>
+    <div class="callout callout-warn">
+      <span class="callout-icon">⚠</span>
+      <div><strong>กฎสำคัญ</strong>ถ้าระบุเวลาที่แน่นอน (in 2010, last year, yesterday, ago) → ต้องใช้ <strong>Simple Past</strong> ห้ามใช้ Present Perfect</div>
+    </div>
+    <div class="exbox">
+      <div class="ex ex-r"><span class="ex-icon">✗</span><div class="ex-body"><span class="ex-en">Scientists have discovered a new treatment in 2018.</span><span class="ex-note">ผิด — ระบุปี 2018 ต้องใช้ Simple Past</span></div></div>
+      <div class="ex ex-g"><span class="ex-icon">✓</span><div class="ex-body"><span class="ex-en">Scientists <u>discovered</u> a new treatment in 2018.</span></div></div>
+      <div class="ex ex-g"><span class="ex-icon">✓</span><div class="ex-body"><span class="ex-en">Scientists <u>have recently discovered</u> a promising new treatment. (ไม่ระบุเวลา)</span></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- PRESENT PERFECT CONTINUOUS -->
+<div class="section" id="ppc">
+  <div class="section-header">
+    <div class="section-num">04</div>
+    <div>
+      <div class="section-title">Present Perfect Continuous</div>
+      <div class="section-desc">เหตุการณ์ที่เริ่มในอดีตและยังดำเนินต่อเนื่องถึงปัจจุบัน (เน้นการดำเนินการ)</div>
+    </div>
+  </div>
+
+  <div class="sub">
+    <div class="sub-title">โครงสร้าง</div>
+    <div class="formula">
+      <span class="positive">+ </span><span class="part-s">Subject</span> <span class="part-plus">+</span> <span class="part-v">has/have been</span> <span class="part-plus">+</span> <span class="part-v">V-ing</span>
+    </div>
+  </div>
+
+  <div class="sub">
+    <div class="sub-title">Present Perfect vs Present Perfect Continuous</div>
+    <div class="compare">
+      <div class="compare-card">
+        <div class="compare-head"><span class="dot" style="background:var(--gold)"></span>Present Perfect</div>
+        <p style="font-size:0.82rem;color:var(--muted);margin-bottom:10px;">เน้น <strong>ผลลัพธ์</strong> ว่าเสร็จแล้ว</p>
+        <div class="ex ex-y"><span class="ex-icon">▸</span><div class="ex-body"><span class="ex-en">She <u>has written</u> three papers this year.</span><span class="ex-th">เขียนเสร็จแล้ว 3 ชิ้น (ผลลัพธ์)</span></div></div>
+      </div>
+      <div class="compare-card">
+        <div class="compare-head"><span class="dot" style="background:var(--teal)"></span>Present Perfect Continuous</div>
+        <p style="font-size:0.82rem;color:var(--muted);margin-bottom:10px;">เน้น <strong>กระบวนการ</strong> ที่ยังดำเนินอยู่</p>
+        <div class="ex ex-t"><span class="ex-icon">▸</span><div class="ex-body"><span class="ex-en">She <u>has been writing</u> papers all year.</span><span class="ex-th">กำลังเขียนต่อเนื่องมาตลอด (กระบวนการ)</span></div></div>
+      </div>
+    </div>
+    <div class="ielts-badges"><span class="ib ib-t2">✍ Task 2 — แนวโน้มต่อเนื่อง</span></div>
+  </div>
+
+  <div class="sub">
+    <div class="sub-title">ตัวอย่างระดับ Academic</div>
+    <div class="exbox">
+      <div class="ex ex-t"><span class="ex-icon">▸</span><div class="ex-body"><span class="ex-en">Scientists <u>have been studying</u> the long-term effects of air pollution for several decades.</span><span class="ex-th">นักวิทยาศาสตร์ศึกษาผลกระทบระยะยาวของมลพิษทางอากาศมาหลายทศวรรษแล้ว (และยังศึกษาอยู่)</span></div></div>
+      <div class="ex ex-t"><span class="ex-icon">▸</span><div class="ex-body"><span class="ex-en">Income inequality <u>has been growing</u> steadily since the 1980s, posing a serious threat to social cohesion.</span></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════
+     PAST TENSES
+═══════════════════════════════════ -->
+
+<!-- SIMPLE PAST -->
+<div class="section" id="past">
+  <div class="section-header">
+    <div class="section-num">05</div>
+    <div>
+      <div class="section-title">Simple Past</div>
+      <div class="section-desc">เหตุการณ์ที่เกิดขึ้นและจบสิ้นในอดีต — ระบุเวลาชัดเจน</div>
+    </div>
+  </div>
+
+  <div class="sub">
+    <div class="sub-title">โครงสร้าง</div>
+    <div class="formula">
+      <span class="positive">+ </span><span class="part-s">Subject</span> <span class="part-plus">+</span> <span class="part-v">V2 / V+ed</span><br>
+      <span class="negative">− </span><span class="part-s">Subject</span> <span class="part-plus">+</span> <span class="part-v">did not</span> <span class="part-plus">+</span> <span class="part-v">V (base)</span><br>
+      <span class="question">? </span><span class="part-v">Did</span> <span class="part-plus">+</span> <span class="part-s">Subject</span> <span class="part-plus">+</span> <span class="part-v">V (base)</span> <span class="part-plus">?</span>
+      <div class="note"># ไม่ว่าประธานจะเป็นอะไร รูป past เหมือนกันทั้งหมด (ยกเว้น be: was/were)</div>
+    </div>
+  </div>
+
+  <div class="sub">
+    <div class="sub-title">Signal Words</div>
+    <div class="signals">
+      <span class="signal sig-rust">yesterday</span><span class="signal sig-rust">last week/year</span><span class="signal sig-rust">in 2020</span><span class="signal sig-rust">ago</span><span class="signal sig-rust">in the past</span><span class="signal sig-rust">previously</span><span class="signal sig-rust">at that time</span><span class="signal sig-rust">when</span><span class="signal sig-rust">then</span><span class="signal sig-rust">once</span><span class="signal sig-rust">during [period]</span>
+    </div>
+    <div class="ielts-badges">
+      <span class="ib ib-t1">📊 Task 1 — ข้อมูลในอดีต</span>
+      <span class="ib ib-t2">✍ Task 2 — อ้างเหตุการณ์ประวัติศาสตร์</span>
+      <span class="ib ib-sp">🎤 Speaking Part 2 — เล่าเรื่อง</span>
+    </div>
+  </div>
+
+  <div class="sub">
+    <div class="sub-title">ตัวอย่างระดับ Academic</div>
+    <div class="exbox">
+      <div class="ex ex-b"><span class="ex-icon">▸</span><div class="ex-body"><span class="ex-en">Carbon emissions <u>peaked</u> in 2019 before declining sharply as a result of the pandemic.</span><span class="ex-th">การปล่อยคาร์บอนพุ่งสูงสุดในปี 2019 ก่อนจะลดลงอย่างรวดเร็ว</span></div></div>
+      <div class="ex ex-b"><span class="ex-icon">▸</span><div class="ex-body"><span class="ex-en">The Industrial Revolution <u>transformed</u> societies across Europe and North America in profound and lasting ways.</span></div></div>
+      <div class="ex ex-b"><span class="ex-icon">▸</span><div class="ex-body"><span class="ex-en">The proportion of households with internet access <u>rose</u> from 15% in 2000 to 65% by 2010.</span><span class="ex-th">Task 1 — บรรยายข้อมูลในอดีต</span></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- PAST CONTINUOUS -->
+<div class="section" id="pastc">
+  <div class="section-header">
+    <div class="section-num">06</div>
+    <div>
+      <div class="section-title">Past Continuous</div>
+      <div class="section-desc">กำลังเกิดขึ้นในอดีต มักใช้คู่กับ Simple Past</div>
+    </div>
+  </div>
+
+  <div class="sub">
+    <div class="sub-title">โครงสร้าง</div>
+    <div class="formula">
+      <span class="positive">+ </span><span class="part-s">Subject</span> <span class="part-plus">+</span> <span class="part-v">was/were</span> <span class="part-plus">+</span> <span class="part-v">V-ing</span>
+      <div class="note"># was = I/he/she/it &nbsp;|&nbsp; were = you/we/they</div>
+    </div>
+  </div>
+
+  <div class="sub">
+    <div class="sub-title">การใช้งานหลัก</div>
+    <div class="tbl"><table>
+      <thead><tr><th>สถานการณ์</th><th>โครงสร้าง</th><th>ตัวอย่าง</th></tr></thead>
+      <tbody>
+        <tr><td class="label">พื้นหลังของเหตุการณ์</td><td class="mono">while + Past Cont. + Simple Past</td><td class="mono">While the economy <u>was growing</u>, inequality <u>persisted</u>.</td></tr>
+        <tr><td class="label">เหตุการณ์ถูกขัดจังหวะ</td><td class="mono">Past Cont. + when + Simple Past</td><td class="mono">Negotiations <u>were proceeding</u> when the crisis <u>erupted</u>.</td></tr>
+        <tr><td class="label">2 เหตุการณ์พร้อมกัน</td><td class="mono">while + Past Cont. + Past Cont.</td><td class="mono">While poverty <u>was declining</u>, inequality <u>was simultaneously rising</u>.</td></tr>
+      </tbody>
+    </table></div>
+    <div class="ielts-badges"><span class="ib ib-t2">✍ Task 2 — บริบทในอดีต</span><span class="ib ib-sp">🎤 Speaking Part 2 — เล่าเรื่อง</span></div>
+    <div class="exbox">
+      <div class="ex ex-p"><span class="ex-icon">▸</span><div class="ex-body"><span class="ex-en">While governments <u>were still debating</u> the issue, the environmental crisis <u>was accelerating</u> beyond control.</span></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- PAST PERFECT -->
+<div class="section" id="pastp">
+  <div class="section-header">
+    <div class="section-num">07</div>
+    <div>
+      <div class="section-title">Past Perfect</div>
+      <div class="section-desc">เหตุการณ์ที่เกิดก่อนอีกเหตุการณ์ในอดีต — "อดีตก่อนหน้าอดีต"</div>
+    </div>
+  </div>
+
+  <div class="sub">
+    <div class="sub-title">โครงสร้าง</div>
+    <div class="formula">
+      <span class="positive">+ </span><span class="part-s">Subject</span> <span class="part-plus">+</span> <span class="part-v">had</span> <span class="part-plus">+</span> <span class="part-v">V3</span>
+      <div class="note"># had ใช้กับทุกประธาน (I/you/he/she/we/they)</div>
+    </div>
+  </div>
+
+  <div class="sub">
+    <div class="sub-title">Timeline ช่วยเข้าใจ</div>
+    <div style="background:var(--paper2);border-radius:10px;padding:20px 24px;margin:10px 0;font-family:'JetBrains Mono',monospace;font-size:0.82rem;overflow-x:auto;">
+      <div style="color:var(--muted);margin-bottom:10px;font-size:0.72rem;">TIMELINE →</div>
+      <div style="display:flex;align-items:center;gap:0;min-width:500px;">
+        <div style="text-align:center;flex:1;">
+          <div style="color:var(--teal);font-weight:700;">Past Perfect</div>
+          <div style="font-size:0.72rem;color:var(--muted);">เกิดก่อน</div>
+          <div style="margin-top:6px;color:var(--ink2);">had invested</div>
+        </div>
+        <div style="flex:1;height:2px;background:linear-gradient(90deg,var(--teal),var(--rust));"></div>
+        <div style="text-align:center;flex:1;">
+          <div style="color:var(--rust);font-weight:700;">Simple Past</div>
+          <div style="font-size:0.72rem;color:var(--muted);">เกิดหลัง</div>
+          <div style="margin-top:6px;color:var(--ink2);">the results emerged</div>
+        </div>
+        <div style="flex:1;height:2px;background:rgba(100,100,100,0.2);"></div>
+        <div style="text-align:center;flex:0.5;">
+          <div style="color:var(--slate);font-weight:700;">NOW</div>
+        </div>
+      </div>
+    </div>
+    <div class="ielts-badges"><span class="ib ib-t1">📊 Task 1 — By [year], X had...</span><span class="ib ib-t2">✍ Task 2 — ลำดับเหตุการณ์</span></div>
+  </div>
+
+  <div class="sub">
+    <div class="sub-title">Signal Words</div>
+    <div class="signals">
+      <span class="signal sig-slate">by the time</span><span class="signal sig-slate">before</span><span class="signal sig-slate">after</span><span class="signal sig-slate">when (ก่อนหน้า)</span><span class="signal sig-slate">already</span><span class="signal sig-slate">by [year]</span><span class="signal sig-slate">once</span><span class="signal sig-slate">as soon as</span>
+    </div>
+  </div>
+
+  <div class="sub">
+    <div class="sub-title">ตัวอย่างระดับ Academic</div>
+    <div class="exbox">
+      <div class="ex ex-p"><span class="ex-icon">▸</span><div class="ex-body"><span class="ex-en">By 2000, global temperatures <u>had already risen</u> by 0.6°C above the pre-industrial baseline.</span><span class="ex-th">ภายในปี 2000 อุณหภูมิโลกได้เพิ่มขึ้น 0.6°C แล้ว (ก่อนจะเกิดเหตุการณ์อื่นในอดีต)</span></div></div>
+      <div class="ex ex-p"><span class="ex-icon">▸</span><div class="ex-body"><span class="ex-en">Once policymakers <u>had recognised</u> the severity of the problem, they moved swiftly to introduce emergency legislation.</span></div></div>
+      <div class="ex ex-p"><span class="ex-icon">▸</span><div class="ex-body"><span class="ex-en">The agreement <u>had been</u> in place for less than a year before it was unilaterally abandoned.</span></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- PAST PERFECT CONTINUOUS -->
+<div class="section" id="pastpc">
+  <div class="section-header">
+    <div class="section-num">08</div>
+    <div>
+      <div class="section-title">Past Perfect Continuous</div>
+      <div class="section-desc">เหตุการณ์ที่ดำเนินต่อเนื่องในอดีต จนกระทั่งถึงอีกจุดในอดีต</div>
+    </div>
+  </div>
+
+  <div class="sub">
+    <div class="sub-title">โครงสร้าง</div>
+    <div class="formula">
+      <span class="positive">+ </span><span class="part-s">Subject</span> <span class="part-plus">+</span> <span class="part-v">had been</span> <span class="part-plus">+</span> <span class="part-v">V-ing</span>
+    </div>
+  </div>
+
+  <div class="sub">
+    <div class="sub-title">ตัวอย่างและการใช้งาน</div>
+    <div class="exbox">
+      <div class="ex ex-p"><span class="ex-icon">▸</span><div class="ex-body"><span class="ex-en">Scientists <u>had been warning</u> about the risks for decades before governments finally took action.</span><span class="ex-th">นักวิทยาศาสตร์เตือนมาหลายทศวรรษแล้ว ก่อนที่รัฐบาลจะดำเนินการ</span></div></div>
+      <div class="ex ex-p"><span class="ex-icon">▸</span><div class="ex-body"><span class="ex-en">By the time the policy was introduced, unemployment <u>had been rising</u> steadily for three consecutive years.</span></div></div>
+    </div>
+    <div class="callout callout-note"><span class="callout-icon">📌</span><div><strong>ใน IELTS</strong>Past Perfect Continuous ใช้น้อยกว่า tenses อื่น แต่ถ้าใช้ได้ถูกต้องจะช่วยแสดง grammatical range ขึ้น Band ได้ดี</div></div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════
+     FUTURE TENSES
+═══════════════════════════════════ -->
+
+<!-- SIMPLE FUTURE -->
+<div class="section" id="fut">
+  <div class="section-header">
+    <div class="section-num">09</div>
+    <div>
+      <div class="section-title">Simple Future</div>
+      <div class="section-desc">การคาดการณ์ / สัญญา / แผนการ — ใช้มากใน Task 2</div>
+    </div>
+  </div>
+
+  <div class="sub">
+    <div class="sub-title">โครงสร้างและความแตกต่าง</div>
+    <div class="tbl"><table>
+      <thead><tr><th>รูปแบบ</th><th>โครงสร้าง</th><th>ใช้เมื่อ</th><th>ตัวอย่าง</th></tr></thead>
+      <tbody>
+        <tr><td class="label">will + V</td><td class="mono">will + V</td><td>คาดการณ์ / การตัดสินใจทันที / สัญญา</td><td class="mono">This trend <u>will</u> continue unless action is taken.</td></tr>
+        <tr><td class="label">is going to + V</td><td class="mono">is/are going to + V</td><td>แผนที่วางไว้ล่วงหน้า / มีหลักฐานชี้ชัด</td><td class="mono">The policy <u>is going to</u> be implemented next year.</td></tr>
+        <tr><td class="label">is/are + V-ing</td><td class="mono">Present Continuous</td><td>แผนที่นัดหมายแล้ว (ส่วนตัว)</td><td class="mono">The committee <u>is meeting</u> tomorrow to finalise the decision.</td></tr>
+      </tbody>
+    </table></div>
+    <div class="ielts-badges"><span class="ib ib-t2">✍ Task 2 — คาดการณ์ / แนะนำ</span><span class="ib ib-sp">🎤 Speaking — แผนอนาคต</span></div>
+  </div>
+
+  <div class="sub">
+    <div class="sub-title">Signal Words</div>
+    <div class="signals">
+      <span class="signal sig-teal">tomorrow</span><span class="signal sig-teal">next year</span><span class="signal sig-teal">in the future</span><span class="signal sig-teal">soon</span><span class="signal sig-teal">by 2030/2050</span><span class="signal sig-teal">in the coming years</span><span class="signal sig-teal">eventually</span><span class="signal sig-teal">within [time]</span>
+    </div>
+  </div>
+
+  <div class="sub">
+    <div class="sub-title">ตัวอย่างระดับ Academic</div>
+    <div class="exbox">
+      <div class="ex ex-b"><span class="ex-icon">▸</span><div class="ex-body"><span class="ex-en">If current trends continue, global temperatures <u>will rise</u> by at least 2°C by the end of this century.</span></div></div>
+      <div class="ex ex-b"><span class="ex-icon">▸</span><div class="ex-body"><span class="ex-en">Without decisive intervention, social inequality <u>will continue</u> to widen, with serious consequences for social cohesion.</span></div></div>
+      <div class="ex ex-b"><span class="ex-icon">▸</span><div class="ex-body"><span class="ex-en">Greater investment in renewable energy <u>will</u> ultimately <u>prove</u> more cost-effective than continued reliance on fossil fuels.</span></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- FUTURE CONTINUOUS -->
+<div class="section" id="futc">
+  <div class="section-header">
+    <div class="section-num">10</div>
+    <div>
+      <div class="section-title">Future Continuous</div>
+      <div class="section-desc">กำลังเกิดขึ้นในช่วงเวลาหนึ่งในอนาคต</div>
+    </div>
+  </div>
+
+  <div class="sub">
+    <div class="sub-title">โครงสร้าง</div>
+    <div class="formula">
+      <span class="positive">+ </span><span class="part-s">Subject</span> <span class="part-plus">+</span> <span class="part-v">will be</span> <span class="part-plus">+</span> <span class="part-v">V-ing</span>
+    </div>
+  </div>
+
+  <div class="sub">
+    <div class="sub-title">ตัวอย่างและการใช้งาน</div>
+    <div class="exbox">
+      <div class="ex ex-b"><span class="ex-icon">▸</span><div class="ex-body"><span class="ex-en">By 2030, many industries <u>will be grappling</u> with the consequences of rapid automation.</span><span class="ex-th">ภายในปี 2030 หลายอุตสาหกรรมกำลังจะต้องรับมือกับผลกระทบของระบบอัตโนมัติ</span></div></div>
+      <div class="ex ex-b"><span class="ex-icon">▸</span><div class="ex-body"><span class="ex-en">As the planet continues to warm, coastal communities <u>will be facing</u> increasingly severe flooding events.</span></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- FUTURE PERFECT -->
+<div class="section" id="futp">
+  <div class="section-header">
+    <div class="section-num">11</div>
+    <div>
+      <div class="section-title">Future Perfect</div>
+      <div class="section-desc">เหตุการณ์ที่จะเสร็จสิ้นก่อนจุดหนึ่งในอนาคต</div>
+    </div>
+  </div>
+
+  <div class="sub">
+    <div class="sub-title">โครงสร้าง</div>
+    <div class="formula">
+      <span class="positive">+ </span><span class="part-s">Subject</span> <span class="part-plus">+</span> <span class="part-v">will have</span> <span class="part-plus">+</span> <span class="part-v">V3</span>
+      <div class="note"># มักใช้กับ by [time]: By 2050, ... will have...</div>
+    </div>
+  </div>
+
+  <div class="sub">
+    <div class="sub-title">ตัวอย่างระดับ Academic</div>
+    <div class="exbox">
+      <div class="ex ex-b"><span class="ex-icon">▸</span><div class="ex-body"><span class="ex-en">By 2050, global temperatures <u>will have risen</u> by an estimated 2-4°C above pre-industrial levels.</span><span class="ex-th">ภายในปี 2050 อุณหภูมิโลกจะเพิ่มขึ้น 2-4°C แล้ว</span></div></div>
+      <div class="ex ex-b"><span class="ex-icon">▸</span><div class="ex-body"><span class="ex-en">If current trends continue, the world's forests <u>will have lost</u> a further 10% of their coverage by 2040.</span></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- FUTURE PERFECT CONTINUOUS -->
+<div class="section" id="futpc">
+  <div class="section-header">
+    <div class="section-num">12</div>
+    <div>
+      <div class="section-title">Future Perfect Continuous</div>
+      <div class="section-desc">การกระทำที่ดำเนินต่อเนื่องไปจนถึงจุดหนึ่งในอนาคต</div>
+    </div>
+  </div>
+
+  <div class="sub">
+    <div class="sub-title">โครงสร้าง</div>
+    <div class="formula">
+      <span class="positive">+ </span><span class="part-s">Subject</span> <span class="part-plus">+</span> <span class="part-v">will have been</span> <span class="part-plus">+</span> <span class="part-v">V-ing</span>
+    </div>
+    <div class="exbox">
+      <div class="ex ex-b"><span class="ex-icon">▸</span><div class="ex-body"><span class="ex-en">By the time the agreement is finalised, negotiators <u>will have been working</u> on it for over three years.</span><span class="ex-th">กว่าจะตกลงกันได้ ผู้เจรจาจะทำงานมาสามปีแล้ว</span></div></div>
+    </div>
+    <div class="callout callout-note"><span class="callout-icon">📌</span><div><strong>ใน IELTS</strong>Future Perfect และ Future Perfect Continuous ใช้เพื่อแสดง grammatical range เพิ่มคะแนน — ไม่จำเป็นต้องใช้บ่อย แต่ต้องใช้ได้ถูกต้องเมื่อใช้</div></div>
+  </div>
+</div>
+
+<!-- ── COMPARE: SAME SENTENCE, DIFFERENT TENSE ── -->
+<div class="section" id="compare">
+  <div class="section-header">
+    <div class="section-num">★</div>
+    <div>
+      <div class="section-title">ประโยคเดียวกัน — Tense ต่างกัน ความหมายต่างกัน</div>
+      <div class="section-desc">ส่วนที่สำคัญที่สุด — เข้าใจตรงนี้แล้วจะใช้ tense ได้ถูกต้องจริงๆ</div>
+    </div>
+  </div>
+
+  <div class="sub">
+    <div class="sub-title">กริยา "work" — เปลี่ยน tense เปลี่ยนความหมาย</div>
+    <div class="diff-grid">
+      <div class="diff-row head">
+        <div class="diff-cell">Tense</div>
+        <div class="diff-cell">ประโยค</div>
+        <div class="diff-cell">ความหมาย / ใช้เมื่อ</div>
+      </div>
+      <div class="diff-row">
+        <div class="diff-cell"><span class="diff-tense">Simple Present</span></div>
+        <div class="diff-cell"><span class="diff-en">She works at a hospital.</span></div>
+        <div class="diff-cell"><span class="diff-th">เธอทำงานที่โรงพยาบาล (ปัจจุบัน / ข้อเท็จจริง)</span></div>
+      </div>
+      <div class="diff-row">
+        <div class="diff-cell"><span class="diff-tense">Present Cont.</span></div>
+        <div class="diff-cell"><span class="diff-en">She is working at a hospital.</span></div>
+        <div class="diff-cell"><span class="diff-th">เธอกำลังทำงานที่โรงพยาบาล (ตอนนี้ หรือช่วงนี้ชั่วคราว)</span></div>
+      </div>
+      <div class="diff-row">
+        <div class="diff-cell"><span class="diff-tense">Present Perfect</span></div>
+        <div class="diff-cell"><span class="diff-en">She has worked at a hospital.</span></div>
+        <div class="diff-cell"><span class="diff-th">เธอเคยทำงานที่โรงพยาบาล (ประสบการณ์ / ไม่ระบุเวลา)</span></div>
+      </div>
+      <div class="diff-row">
+        <div class="diff-cell"><span class="diff-tense">Pres. Perf. Cont.</span></div>
+        <div class="diff-cell"><span class="diff-en">She has been working at a hospital.</span></div>
+        <div class="diff-cell"><span class="diff-th">เธอทำงานที่โรงพยาบาลมาสักระยะแล้ว (ต่อเนื่อง ยังอยู่)</span></div>
+      </div>
+      <div class="diff-row">
+        <div class="diff-cell"><span class="diff-tense">Simple Past</span></div>
+        <div class="diff-cell"><span class="diff-en">She worked at a hospital.</span></div>
+        <div class="diff-cell"><span class="diff-th">เธอเคยทำงานที่โรงพยาบาล (เสร็จสิ้นแล้ว ไม่ทำแล้ว)</span></div>
+      </div>
+      <div class="diff-row">
+        <div class="diff-cell"><span class="diff-tense">Past Continuous</span></div>
+        <div class="diff-cell"><span class="diff-en">She was working at a hospital.</span></div>
+        <div class="diff-cell"><span class="diff-th">เธอกำลังทำงานที่โรงพยาบาล (ช่วงเวลาหนึ่งในอดีต)</span></div>
+      </div>
+      <div class="diff-row">
+        <div class="diff-cell"><span class="diff-tense">Past Perfect</span></div>
+        <div class="diff-cell"><span class="diff-en">She had worked at a hospital.</span></div>
+        <div class="diff-cell"><span class="diff-th">เธอทำงานที่โรงพยาบาลมาก่อน (ก่อนเหตุการณ์อื่นในอดีต)</span></div>
+      </div>
+      <div class="diff-row">
+        <div class="diff-cell"><span class="diff-tense">Simple Future</span></div>
+        <div class="diff-cell"><span class="diff-en">She will work at a hospital.</span></div>
+        <div class="diff-cell"><span class="diff-th">เธอจะทำงานที่โรงพยาบาล (อนาคต / คาดการณ์)</span></div>
+      </div>
+      <div class="diff-row">
+        <div class="diff-cell"><span class="diff-tense">Future Perfect</span></div>
+        <div class="diff-cell"><span class="diff-en">She will have worked at a hospital for 10 years by 2030.</span></div>
+        <div class="diff-cell"><span class="diff-th">ภายในปี 2030 เธอจะทำงานที่โรงพยาบาลครบ 10 ปีแล้ว</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sub">
+    <div class="sub-title">เปรียบเทียบ: Present Perfect vs Simple Past</div>
+    <div class="compare">
+      <div class="compare-card highlight">
+        <div class="compare-head"><span class="dot" style="background:var(--gold)"></span>Present Perfect — ยังเกี่ยวกับปัจจุบัน</div>
+        <div class="exbox">
+          <div class="ex ex-y"><span class="ex-icon">▸</span><div class="ex-body"><span class="ex-en">Scientists <u>have discovered</u> a new treatment.</span><span class="ex-th">ค้นพบแล้ว และยังมีความสำคัญถึงตอนนี้</span></div></div>
+          <div class="ex ex-y"><span class="ex-icon">▸</span><div class="ex-body"><span class="ex-en">The situation <u>has deteriorated</u> significantly.</span><span class="ex-th">แย่ลงแล้ว และยังแย่อยู่ตอนนี้</span></div></div>
+        </div>
+      </div>
+      <div class="compare-card">
+        <div class="compare-head"><span class="dot" style="background:var(--rust)"></span>Simple Past — จบสิ้นในอดีต</div>
+        <div class="exbox">
+          <div class="ex ex-b"><span class="ex-icon">▸</span><div class="ex-body"><span class="ex-en">Scientists <u>discovered</u> this treatment in 2018.</span><span class="ex-th">ค้นพบในปี 2018 (ระบุเวลา = Past)</span></div></div>
+          <div class="ex ex-b"><span class="ex-icon">▸</span><div class="ex-body"><span class="ex-en">The situation <u>deteriorated</u> during the crisis.</span><span class="ex-th">แย่ลงในช่วงวิกฤต (ชัดเจนในอดีต)</span></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── IELTS USAGE ── -->
+<div class="section" id="ielts">
+  <div class="section-header">
+    <div class="section-num">IELTS</div>
+    <div>
+      <div class="section-title">ใช้ Tense ใน IELTS อย่างไร</div>
+      <div class="section-desc">แนวทางปฏิบัติสำหรับ Writing และ Speaking</div>
+    </div>
+  </div>
+
+  <div class="sub">
+    <div class="sub-title">Writing Task 1 — Graph Description</div>
+    <div class="tbl"><table>
+      <thead><tr><th>สถานการณ์</th><th>Tense ที่ใช้</th><th>ตัวอย่าง</th></tr></thead>
+      <tbody>
+        <tr><td class="label">บรรยายกราฟ (intro)</td><td class="mono">Simple Present</td><td class="mono">The graph <u>shows</u> / <u>illustrates</u> / <u>presents</u>...</td></tr>
+        <tr><td class="label">Overview (ทั่วไป)</td><td class="mono">Simple Present</td><td class="mono">Overall, it <u>is</u> clear that... / the most notable feature <u>is</u>...</td></tr>
+        <tr><td class="label">ข้อมูลในอดีต</td><td class="mono">Simple Past</td><td class="mono">Emissions <u>peaked</u> in 2010 / usage <u>fell</u> sharply...</td></tr>
+        <tr><td class="label">แนวโน้มถึงปัจจุบัน</td><td class="mono">Present Perfect</td><td class="mono">Temperatures <u>have risen</u> by 1.5°C since 1900.</td></tr>
+        <tr><td class="label">คาดการณ์ในอนาคต</td><td class="mono">Simple Future / Future Perfect</td><td class="mono">By 2050, populations <u>will have doubled</u>.</td></tr>
+      </tbody>
+    </table></div>
+  </div>
+
+  <div class="sub">
+    <div class="sub-title">Writing Task 2 — Essay</div>
+    <div class="tbl"><table>
+      <thead><tr><th>จุดประสงค์</th><th>Tense ที่ใช้</th><th>ตัวอย่าง</th></tr></thead>
+      <tbody>
+        <tr><td class="label">ข้อเท็จจริง / ความเห็น</td><td class="mono">Simple Present</td><td class="mono">Education <u>plays</u> a crucial role in development.</td></tr>
+        <tr><td class="label">อ้างงานวิจัย</td><td class="mono">Present Perfect / Simple Present</td><td class="mono">Research <u>has shown</u> / Studies <u>indicate</u> that...</td></tr>
+        <tr><td class="label">เหตุการณ์ประวัติศาสตร์</td><td class="mono">Simple Past</td><td class="mono">The Industrial Revolution <u>transformed</u> society.</td></tr>
+        <tr><td class="label">สิ่งที่เปลี่ยนไปแล้ว</td><td class="mono">Present Perfect</td><td class="mono">Technology <u>has fundamentally changed</u> how we communicate.</td></tr>
+        <tr><td class="label">คาดการณ์ / แนะนำ</td><td class="mono">Simple Future + Modal</td><td class="mono">This trend <u>will continue</u> / Governments <u>should invest</u>...</td></tr>
+        <tr><td class="label">สมมติ / เงื่อนไข</td><td class="mono">Conditional tenses</td><td class="mono">If action <u>is taken</u>, emissions <u>will fall</u>.</td></tr>
+      </tbody>
+    </table></div>
+  </div>
+
+  <div class="sub">
+    <div class="sub-title">Speaking — แต่ละ Part</div>
+    <div class="tbl"><table>
+      <thead><tr><th>Part</th><th>Tenses หลัก</th><th>ตัวอย่าง</th></tr></thead>
+      <tbody>
+        <tr><td class="label">Part 1 (ชีวิตตัวเอง)</td><td class="mono">Simple Present, Pres. Cont., Pres. Perfect</td><td class="mono">I <u>study</u> / I <u>have been living</u> here for 5 years.</td></tr>
+        <tr><td class="label">Part 2 (เล่าเรื่อง)</td><td class="mono">Simple Past, Past Cont., Past Perfect</td><td class="mono">I <u>was walking</u> when I <u>noticed</u> / I <u>had never seen</u> anything like it.</td></tr>
+        <tr><td class="label">Part 3 (อภิปราย)</td><td class="mono">Simple Present, Present Perfect, Future, Conditional</td><td class="mono">This <u>has become</u> increasingly important / If we <u>don't act</u>, problems <u>will worsen</u>.</td></tr>
+      </tbody>
+    </table></div>
+  </div>
+</div>
+
+<!-- ── ERRORS ── -->
+<div class="section" id="errors">
+  <div class="section-header">
+    <div class="section-num">ERR</div>
+    <div>
+      <div class="section-title">ข้อผิดพลาดที่พบบ่อยที่สุด</div>
+      <div class="section-desc">สิ่งที่ลด Band — ต้องหลีกเลี่ยง</div>
+    </div>
+  </div>
+
+  <div class="sub">
+    <div class="tbl"><table>
+      <thead><tr><th>#</th><th>ผิด ❌</th><th>ถูก ✓</th><th>กฎ</th></tr></thead>
+      <tbody>
+        <tr><td>1</td><td class="mono">Scientists have discovered it in 2018.</td><td class="mono">Scientists discovered it in 2018.</td><td>ระบุเวลา = Simple Past</td></tr>
+        <tr><td>2</td><td class="mono">I am knowing the answer.</td><td class="mono">I know the answer.</td><td>stative verbs ไม่ใช้ continuous</td></tr>
+        <tr><td>3</td><td class="mono">The graph is showed a rise.</td><td class="mono">The graph shows a rise.</td><td>show = simple present (ไม่ใช้ passive)</td></tr>
+        <tr><td>4</td><td class="mono">She have worked here since 2020.</td><td class="mono">She has worked here since 2020.</td><td>has (singular) / have (plural)</td></tr>
+        <tr><td>5</td><td class="mono">By 2050, temperatures rise by 2°C.</td><td class="mono">By 2050, temperatures will have risen by 2°C.</td><td>by [future time] = Future Perfect</td></tr>
+        <tr><td>6</td><td class="mono">When I will arrive, I will call you.</td><td class="mono">When I arrive, I will call you.</td><td>หลัง when (future) = Simple Present</td></tr>
+        <tr><td>7</td><td class="mono">The data were collected last year. (ถ้าอ้างผลตอนนี้)</td><td class="mono">The data were collected last year and the results have since been published.</td><td>แยก past fact กับ present result</td></tr>
+        <tr><td>8</td><td class="mono">He is working here since 2015.</td><td class="mono">He has been working here since 2015.</td><td>since ต้องใช้ Perfect tense</td></tr>
+        <tr><td>9</td><td class="mono">The situation improve gradually.</td><td class="mono">The situation is improving gradually. / The situation has improved gradually.</td><td>ต้องมี auxiliary verb</td></tr>
+        <tr><td>10</td><td class="mono">Research are showing that...</td><td class="mono">Research shows that... / Research has shown that...</td><td>research = uncountable = singular verb</td></tr>
+      </tbody>
+    </table></div>
+  </div>
+</div>
+
+<!-- ── QUIZ ── -->
+<div class="section" id="quiz">
+  <div class="section-header">
+    <div class="section-num">QUIZ</div>
+    <div>
+      <div class="section-title">แบบทดสอบ — 20 ข้อ</div>
+      <div class="section-desc">ทดสอบความเข้าใจ Tenses ทุกบท</div>
+    </div>
+  </div>
+
+  <div class="quiz-wrap">
+    <div class="quiz-header">🎯 Tenses Quiz</div>
+    <div class="quiz-meta">20 ข้อ · คลิกตัวเลือกเพื่อดูคำอธิบาย · คะแนนจะปรากฏด้านบน</div>
+
+    <div class="score-bar">
+      <div class="score-label">คะแนน</div>
+      <div class="score-track"><div class="score-fill" id="scoreBar"></div></div>
+      <div class="score-num" id="scoreNum">0 / 20</div>
+    </div>
+
+    <div id="quizBody"></div>
+  </div>
+</div>
+
+</div><!-- end content -->
+</main>
+</div><!-- end layout -->
+
+<button class="back-top" id="backTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+<script>
+// ── QUIZ DATA ──
+const questions = [
+  {
+    q: 'เลือก tense ที่ถูกต้อง: "The graph ___ a dramatic rise in urban migration from 2000 to 2020."',
+    opts: ['showed','is showing','shows','has shown'],
+    ans: 2,
+    exp: '✓ Simple Present — ใช้ "shows" เมื่อบรรยายกราฟ เพราะข้อมูลยังอยู่บนกราฟ ไม่ใช่เหตุการณ์ที่ผ่านไปแล้ว'
+  },
+  {
+    q: 'ประโยคใดถูกต้อง? (Scientists + discover + 2018)',
+    opts: ['Scientists have discovered it in 2018.','Scientists discovered it in 2018.','Scientists are discovering it in 2018.','Scientists had discovered it in 2018.'],
+    ans: 1,
+    exp: '✓ Simple Past — เมื่อระบุเวลาที่แน่นอน (in 2018) ต้องใช้ Simple Past เสมอ ห้ามใช้ Present Perfect'
+  },
+  {
+    q: '"Global temperatures ___ by 1.1°C since pre-industrial times." — ควรใช้อะไร?',
+    opts: ['rose','have risen','are rising','had risen'],
+    ans: 1,
+    exp: '✓ Present Perfect — เริ่มในอดีต (pre-industrial times) และผลยังมีผลถึงปัจจุบัน ใช้ since = signal word ของ Present Perfect'
+  },
+  {
+    q: '"While the economy ___, inequality persisted." — ควรใช้อะไร?',
+    opts: ['grew','was growing','has grown','is growing'],
+    ans: 1,
+    exp: '✓ Past Continuous — "while + Past Continuous" บรรยายพื้นหลังของเหตุการณ์ที่กำลังเกิดขึ้นในอดีต คู่กับ Simple Past'
+  },
+  {
+    q: '"By 2050, global temperatures ___ by 2°C." — ควรใช้อะไร?',
+    opts: ['will rise','will have risen','are rising','rose'],
+    ans: 1,
+    exp: '✓ Future Perfect — "By + future time" = Future Perfect (will have + V3) บอกว่าจะเสร็จสิ้นก่อนจุดนั้นในอนาคต'
+  },
+  {
+    q: 'ประโยคใดใช้ Present Perfect ถูกต้อง?',
+    opts: ['She has worked here since two years.','She has been working here for two years.','She is working here since two years.','She worked here for two years.'],
+    ans: 1,
+    exp: '✓ Present Perfect Continuous + for — "for + duration" ที่ยังดำเนินอยู่ ใช้ Present Perfect Continuous ได้ดีกว่า Present Perfect'
+  },
+  {
+    q: '"Research ___ that early intervention yields the best outcomes." — ควรใช้อะไร?',
+    opts: ['is showing','showed','consistently shows','have shown'],
+    ans: 2,
+    exp: '✓ Simple Present — งานวิจัยยังมีผลอยู่ตอนนี้ "consistently shows" แสดงความจริงทั่วไป (research = singular ใช้ shows)'
+  },
+  {
+    q: '"Once policymakers ___ the severity of the problem, they moved swiftly to act." — ควรใช้อะไร?',
+    opts: ['recognised','had recognised','have recognised','were recognising'],
+    ans: 1,
+    exp: '✓ Past Perfect — เกิดก่อนที่พวกเขาจะ "moved" (Simple Past) ดังนั้นต้องใช้ Past Perfect'
+  },
+  {
+    q: 'ประโยคใดผิด? (Stative Verb)',
+    opts: ['She believes this is important.','She is believing this is important.','She knows the answer.','She wants to improve.'],
+    ans: 1,
+    exp: '✓ "is believing" ผิด — believe เป็น stative verb แสดงสถานะ ไม่ใช้รูป continuous ใช้ Simple Present: "She believes"'
+  },
+  {
+    q: '"Scientists ___ about the risks for decades before governments finally acted." — ควรใช้อะไร?',
+    opts: ['warned','have been warning','had been warning','were warning'],
+    ans: 2,
+    exp: '✓ Past Perfect Continuous — การเตือนดำเนินต่อเนื่องในอดีต จนกระทั่งถึงอีกจุดในอดีต (governments acted) ใช้ Past Perfect Continuous'
+  },
+  {
+    q: '"When I ___ home, I will call you." — ควรใช้อะไร?',
+    opts: ['will arrive','will have arrived','arrive','am arriving'],
+    ans: 2,
+    exp: '✓ Simple Present — หลัง "when" ที่หมายถึงอนาคต ใช้ Simple Present (ไม่ใช้ will) ในประโยคเงื่อนไข'
+  },
+  {
+    q: '"The proportion ___ from 15% in 2000 to 65% by 2010." — ควรใช้อะไร?',
+    opts: ['rises','has risen','rose','is rising'],
+    ans: 2,
+    exp: '✓ Simple Past — ระบุช่วงเวลาในอดีต (in 2000, by 2010) ที่ชัดเจน ต้องใช้ Simple Past ในการบรรยายกราฟ'
+  },
+  {
+    q: '"Income inequality ___ steadily since the 1980s." — ควรใช้อะไร?',
+    opts: ['grew','has been growing','had grown','grows'],
+    ans: 1,
+    exp: '✓ Present Perfect Continuous — "since the 1980s" บอกจุดเริ่มต้น และการเติบโต "ยังดำเนินอยู่" ต่อเนื่อง ใช้ Present Perfect Continuous'
+  },
+  {
+    q: 'ประโยคใด Task 2 Essay ดีที่สุดสำหรับการอ้างงานวิจัย?',
+    opts: ['Research was showing that exercise reduces stress.','Research is showing that exercise reduces stress.','Research has consistently shown that exercise reduces stress.','Research will show that exercise reduces stress.'],
+    ans: 2,
+    exp: '✓ "has consistently shown" — ดีที่สุดสำหรับ Academic Writing เพราะแสดงว่างานวิจัยหลายชิ้นยืนยัน (consistently) และผลยังมีผลถึงปัจจุบัน'
+  },
+  {
+    q: '"By the time the agreement ___ finalised, negotiators will have been working on it for years." — ควรใช้อะไร?',
+    opts: ['will be','is','was','has been'],
+    ans: 1,
+    exp: '✓ Simple Present — หลัง "by the time" ที่หมายถึงอนาคต ใช้ Simple Present ใน time clause (เหมือน when)'
+  },
+  {
+    q: '"The Industrial Revolution ___ societies across Europe in profound ways." — ควรใช้อะไร?',
+    opts: ['transforms','has transformed','transformed','is transforming'],
+    ans: 2,
+    exp: '✓ Simple Past — Industrial Revolution เป็นเหตุการณ์ประวัติศาสตร์ที่เกิดขึ้นและจบสิ้นแล้ว ใช้ Simple Past'
+  },
+  {
+    q: '"Technology ___ how we communicate fundamentally over the past century." — ควรใช้อะไร?',
+    opts: ['changed','is changing','has changed','had changed'],
+    ans: 2,
+    exp: '✓ Present Perfect — "over the past century" ไม่ระบุเวลาแน่นอน และผลยังมีผลถึงปัจจุบัน ใช้ Present Perfect'
+  },
+  {
+    q: 'ประโยคใดถูกต้องสำหรับ Speaking Part 2?',
+    opts: ['I was walking to school when I have seen an accident.','I was walking to school when I saw an accident.','I am walking to school when I saw an accident.','I walk to school when I saw an accident.'],
+    ans: 1,
+    exp: '✓ Past Continuous + Simple Past — "was walking" = กำลังเดิน (พื้นหลัง) "saw" = เหตุการณ์ที่เกิดขึ้นมาขัดจังหวะ'
+  },
+  {
+    q: '"If current trends continue, the world ___ a further 20% of its forest coverage by 2040." — ควรใช้อะไร?',
+    opts: ['loses','will lose','will have lost','has lost'],
+    ans: 2,
+    exp: '✓ Future Perfect — "by 2040" (จุดในอนาคต) + การสูญเสียจะ "สำเร็จ" ก่อนจุดนั้น = Future Perfect (will have lost)'
+  },
+  {
+    q: '"___ current trends, global temperatures are likely to increase significantly." — ควรใช้อะไร?',
+    opts: ['Given','Giving','Give','To give'],
+    ans: 0,
+    exp: '✓ "Given" — Participle phrase แสดงเหตุผล = "Given [สิ่งที่มีอยู่]" เทียบเท่า "Considering" ใช้บ่อยใน Academic Writing'
+  }
+];
+
+let score = 0;
+let answered = 0;
+
+function buildQuiz() {
+  const body = document.getElementById('quizBody');
+  questions.forEach((q, i) => {
+    const div = document.createElement('div');
+    div.className = 'q-item';
+    div.id = `q${i}`;
+    div.innerHTML = `
+      <div class="q-num">ข้อที่ ${i+1} / 20</div>
+      <div class="q-text">${q.q.replace(/___/g, '<span class="blank">___</span>')}</div>
+      <div class="q-opts">
+        ${q.opts.map((o, j) => `<button class="q-btn" onclick="pick(${i},${j})">${o}</button>`).join('')}
+      </div>
+      <div class="q-feedback" id="fb${i}"></div>
+    `;
+    body.appendChild(div);
+  });
+}
+
+function pick(qi, oi) {
+  const q = questions[qi];
+  const item = document.getElementById(`q${qi}`);
+  if (item.classList.contains('answered')) return;
+  item.classList.add('answered');
+  answered++;
+
+  const btns = item.querySelectorAll('.q-btn');
+  btns.forEach(b => b.disabled = true);
+  btns[oi].classList.add(oi === q.ans ? 'correct' : 'wrong');
+  if (oi !== q.ans) btns[q.ans].classList.add('correct');
+
+  if (oi === q.ans) score++;
+
+  const fb = document.getElementById(`fb${qi}`);
+  fb.textContent = q.exp;
+  fb.className = `q-feedback show ${oi === q.ans ? 'ok' : 'no'}`;
+
+  updateScore();
+}
+
+function updateScore() {
+  document.getElementById('scoreNum').textContent = `${score} / ${answered}`;
+  document.getElementById('scoreBar').style.width = `${(score/20)*100}%`;
+}
+
+buildQuiz();
+
+// ── NAV ACTIVE ──
+const sections = document.querySelectorAll('.section[id]');
+const navLinks = document.querySelectorAll('.nav-link');
+
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      navLinks.forEach(l => l.classList.remove('active'));
+      const a = document.querySelector(`.nav-link[href="#${e.target.id}"]`);
+      if (a) a.classList.add('active');
+    }
+  });
+}, { threshold: 0.25 });
+
+sections.forEach(s => obs.observe(s));
+
+// ── BACK TOP ──
+window.addEventListener('scroll', () => {
+  document.getElementById('backTop').classList.toggle('show', scrollY > 400);
+});
+</script>
+</body>
+</html>
